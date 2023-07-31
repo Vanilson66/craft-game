@@ -1,13 +1,13 @@
 import { useRef, useEffect } from "react"
 import { useThree, useFrame } from "@react-three/fiber"
-import { useSphere } from "@react-three/cannon"
+import { useSphere, useBox } from "@react-three/cannon"
 import { Vector3 } from "three"
-
 import { useKeyboard } from "../hooks/useKeyboard"
+
+const JUMP_FORCE = 4 
 
 export const Player = () => {
     const actions = useKeyboard()
-    console.log(actions)
 
     const { camera } = useThree()
     const [ ref, api ] = useSphere(() => ({
@@ -30,7 +30,10 @@ export const Player = () => {
 
     useFrame(() => {
         camera.position.copy(new Vector3(pos.current[0], pos.current[1]))
-        //api.velocity.set(0,0,0)
+
+        if(actions.jump) {
+            api.velocity.set(0, JUMP_FORCE, 0)
+        } 
     })
     
     return (
