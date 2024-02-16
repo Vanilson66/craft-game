@@ -1,8 +1,14 @@
-# React + Vite
+# To run the project, make sure you have node and git installed
+# follow the following steps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Clone the repository:
+git clone https://github.com/Vanilson66/craft-game
 
-Currently, two official plugins are available:
+- Go into the project folder:
+cd craft-game
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Install the dependences:
+npm install
+
+- And finaly, run the code:
+npm run dev
