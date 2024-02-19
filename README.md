@@ -1,3 +1,5 @@
+This is a 3d project inspired on minecraft's world made using React, Javascript and 3Js
+
 # To run the project, make sure you have node and git installed
 # follow the following steps
 
